@@ -1,0 +1,352 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("../assets/background.jpg");
+    font-family: 'Poiret One', cursive;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    border: 6px double black;
+    box-sizing: border-box;
+    background-color:	#fcfcff;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1%;
+}
+
+nav a {
+    font-size: 2vh;
+    text-decoration: none;
+    color: black;
+}
+
+#projects-btn {
+    display: none;
+}
+
+.container {
+    min-height: 80vh;
+    margin: 12% 15%;
+    border: 10px double black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:	#fff9fb;
+    box-shadow: 0 0 20px silver;
+}
+
+h1 {
+    font-size: 4vh;
+    padding-bottom: 5%;
+}
+
+h2 {
+    font-size: 2vh;
+}
+
+h3 {
+    font-size: 4vh;
+    padding-bottom: 10%;
+}
+
+h4 {
+    font-size: 1.7vh;
+}
+
+#text-about {
+    font-size: 2vh;
+    margin: 5% 15%;
+    text-align: justify;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: auto;
+    grid-column-gap: 4.5%;
+    grid-row-gap: 10%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.list-item {
+    font-size: 2vh;
+}
+
+.project-item {
+    height: 10vh;
+    width: auto;
+    filter: grayscale() opacity(50%);
+    background-size: cover;
+}
+
+.project-items {
+    display: flex;
+    flex-direction: column;
+}
+
+#project-1 {
+    background-image: url("../assets/gry.jpg");
+}
+
+#project-2 {
+    background-image: url("../assets/my-bday.jpg");
+}
+
+#project-3 {
+    background-image: url("../assets/rocznica.jpg");
+}
+
+#project-4 {
+    background-image: url("../assets/todo.jpg");
+}
+
+#project-5 {
+    background-image: url("../assets/gh.jpg");
+}
+
+#icons {
+    font-size: 200%;
+}
+
+#icons a {
+    color: black;
+}
+
+footer {
+    padding: 0.6%;
+    border-top: 6px double black;
+}
+
+
+@media (min-width: 768px) {
+    nav {
+        width: 12vw;
+        margin-left: 1%;
+        background-color:	#fcfcff;
+        height: 20vh;
+        top: 35%;
+        line-height: 120%;
+        border: none;
+    }
+
+    .nav-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 1%;
+    }
+    
+    nav a {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.7vh;
+        text-decoration: none;
+        color: black;
+    }
+
+    #project-nav {
+        display: none;
+    }
+
+    aside {
+        height: 20vh;
+        top: 35%;
+        position: fixed;
+        right: 0;
+        width: 12vw;
+        margin-right: 1%;
+        background-color:	#fcfcff;
+        font-size: 1.7vh;
+        line-height: 120%;
+    }
+
+    #projects-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    #projects-btn a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .square-deco-container {
+        display: grid;
+        box-sizing: border-box;
+        grid-template-columns: 
+          [outer-start]  5px 
+          [mid-start]    5px
+          [inner-start]  2px
+          [gap-start]    1fr
+          [gap-end]      2px
+          [inner-end]    5px
+          [mid-end]      5px 
+          [outer-end] 
+        ;
+        grid-template-rows: 
+          [outer-start]  5px 
+          [mid-start]    5px 
+          [inner-start]  2px
+          [gap-start]    1fr
+          [gap-end]      2px
+          [inner-end]    5px
+          [mid-end]      5px 
+          [outer-end] 
+        ;
+        box-shadow: 0 0 10px silver;
+    }
+      
+    .square-deco-container .square-deco-content {
+        grid-area: inner;
+        padding: 2px;
+    }
+    
+    .square-deco-container .square-deco-inner {
+        grid-area: mid;
+        border: 2px solid black;
+    }
+    
+    .square-deco-container .square-deco-square-left-top {
+        grid-column: outer-start / inner-start;
+        grid-row: outer-start / inner-start;
+        border: 1.5px solid black;
+    }
+    
+    .square-deco-container .square-deco-square-left-bottom {
+        grid-column: outer-start / inner-start;
+        grid-row: inner-end / outer-end;
+        border: 1.5px solid black;
+    }
+    
+    .square-deco-container .square-deco-square-right-top {
+        grid-column: inner-end / outer-end;
+        grid-row: outer-start / inner-start;
+        border: 1.5px solid black;
+    }
+    
+    .square-deco-container .square-deco-square-right-bottom {
+        grid-column: inner-end / outer-end;
+        grid-row: inner-end / outer-end;
+        border: 1.5px solid black;
+    }
+    
+    .square-deco-container .square-deco-tall {
+        grid-column: gap-start / gap-end;
+        grid-row: outer-start / outer-end;
+        border-top: 1.5px solid black;
+        border-bottom: 1.5px solid black;
+    }
+    
+    .square-deco-container .square-deco-wide {
+        grid-column: outer-start / outer-end;
+        grid-row: gap-start / gap-end;
+        border-left: 1.5px solid black;
+        border-right: 1.5px solid black;
+    }
+
+    h1 {
+        font-size: 10vh;
+        padding-bottom: 2%;
+    }
+    
+    h2 {
+        font-size: 5vh;
+    }
+
+    h3 {
+        font-size: 5vh;
+        padding-bottom: 3%;
+    }
+
+    h4 {
+        padding-top: 3%;
+        color: black;
+        font-size: 2.5vh;
+    }
+
+    .container {
+        height: 80vh;
+        margin: 5% 15%;
+    }
+
+    #text-about {
+        font-size: 3vh;
+    }
+
+    .list {
+        display: grid;
+        grid-template-columns: 27% 27% 27%;
+        grid-template-rows: auto;
+        grid-column-gap: 3.3%;
+        grid-row-gap: 6%;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .list-item {
+        font-size: 3vh;
+    }
+
+    .project-item {
+        height: 20vh;
+    }
+
+    #icons {
+        font-size: 400%;
+    }
+}
+
+@media (min-width: 996px) {
+    nav, aside {
+        height: 22vh;
+        top: 40%;
+        line-height: 150%;
+    }
+
+    nav a, aside {
+        font-size: 3vh;
+    }
+
+    nav a:hover{
+        background-color: silver;
+    }
+
+    .square-deco-container .square-deco-content {
+        padding: 5px 10px;
+    }
+
+    .project-item{
+        background-size: contain;
+    }
+    .project-item:hover {
+        color: transparent;
+        filter: unset;
+    }
+
+    .bigger:hover{
+        transform: scale(1.07);
+        transition: 0.5s all;
+    }
+
+    #icons a:hover {
+        color: silver;
+    }
+}
