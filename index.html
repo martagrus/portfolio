@@ -28,29 +28,48 @@
         <div class="square-deco-tall"></div>
         <div class="square-deco-wide"></div>
     </nav>
-    <aside class="square-deco-container bigger">
-        <div class="square-deco-content" id="projects-btn"><a href="#projects">PROJECTS</a></div>
-        <div class="square-deco-inner"></div>
-        <div class="square-deco-square-left-top"></div>
-        <div class="square-deco-square-left-bottom"></div>
-        <div class="square-deco-square-right-top"></div>
-        <div class="square-deco-square-right-bottom"></div>
-        <div class="square-deco-tall"></div>
-        <div class="square-deco-wide"></div>
-    </aside>
+    <a href="#projects">
+        <aside class="square-deco-container bigger">
+            <div class="square-deco-content" id="projects-btn">PROJECTS</div>
+            <div class="square-deco-inner"></div>
+            <div class="square-deco-square-left-top"></div>
+            <div class="square-deco-square-left-bottom"></div>
+            <div class="square-deco-square-right-top"></div>
+            <div class="square-deco-square-right-bottom"></div>
+            <div class="square-deco-tall"></div>
+            <div class="square-deco-wide"></div>
+        </aside>
+    </a>
     <section id="main" class="container">
-        <h1 class="bigger">Marta Gruszecka</h1>
-        <h2>Junior Frontend Developer</h3>
+        <h1>Marta Gruszecka</h1>
+        <h2 id="profession">Junior Frontend Developer</h3>
     </section>
     <section id="about" class="container">
         <h3>About me</h3>
-        <p id="text-about">Cupcake ipsum dolor sit amet marzipan bonbon. Dragée marshmallow cake sweet roll. 
-            Cake marshmallow jelly-o cake dragée caramels. Sweet roll cotton candy fruitcake donut croissant cupcake pastry. 
-            Bonbon candy canes marzipan candy canes sugar plum. Icing sugar plum macaroon. 
-            Jelly-o caramels danish chupa chups macaroon carrot cake. Gummies muffin halvah gummi bears bear claw sweet cupcake. 
-            Topping cookie cupcake chocolate bar jelly-o cake. Cake dessert pudding gingerbread cheesecake brownie lemon drops candy. 
-            Lemon drops tart gingerbread tart ice cream toffee chupa chups jelly caramels. Pie cookie lollipop. 
-            Cupcake candy carrot cake chocolate donut caramels jelly cheesecake gingerbread.</p>
+        <div id="about-container">
+            <p id="text-about" class="about-texts">I am looking for a job as a Junior Frontend Developer. I am an alumnus of the Frontend Developer Bootcamp 
+                from Future Collars (former CoderTrust).  After over ten years in marketing and fashion, I decided to make a career 
+                pivot and started learning to code. I chose the Frontend path, where I can use my previous marketing experience and 
+                knowledge to build amazing websites and apps. Even the bootcamp is already behind me, I still continue to deepen and 
+                expand my knowledge in frontend languages and frameworks.
+            </p>
+            <ul id="course-info" class="about-texts">Courses and certificates:
+                <li>3D Designing with JavaScript (Girls.js, 2019)</li>
+                <li>JavaScript ES6, Vue.js, Angular 2 (The Net Ninja, 2019)</li>
+                <li>Facebook Developer Circle: Warsaw Conference (2019)</li>
+                <li>JavaScript Basics (Ultimate Courses, 2019)</li>
+                <li>Frontend Developer Bootcamp (CodersTrust, 2019)</li>
+                <li>HTML, CSS, JavaScript, React (Codecademy, 2019)</li>
+            </ul>
+            <div id="experience-icons" class="about-texts">
+                <div>Find out more about my experience on 
+                    <a href="https://www.linkedin.com/in/martagruszecka/" target="_blank" class="icons"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div>Check out my code on 
+                    <a href="https://github.com/martagrus" target="_blank" class="icons"><i class="fab fa-github-square"></i></a>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="technologies" class="container">
         <h3>Technologies</h3>
@@ -62,21 +81,22 @@
             <div class="list-item bigger">Bulma</div>
             <div class="list-item bigger">JavaScript ES6</div>
             <div class="list-item bigger">REST API</div>
-            <div class="list-item bigger">WebAPI</div>
+            <div class="list-item bigger">Web API</div>
             <div class="list-item bigger">React</div>
             <div class="list-item bigger">DOM/ Virtual DOM</div>
+            <div class="list-item bigger">Git</div>
         </div>
     </section>
     <section id="projects" class="container">
         <h3>My projects</h3>
         <div class="list">
             <div class="project-items">
-                <a href="https://martagrus.github.io/my-games-react/" target="_blank" id="project-1" class="project-item bigger"></a>
-                <h4>Two-Game App</h4>
+                <a href="https://martagrus.github.io/fake-restaurant/" target="_blank" id="project-1" class="project-item bigger"></a>
+                <h4>The Fake Restaurant</h4>
             </div>
             <div class="project-items">
-                <a href="https://martagrus.github.io/bday-countdown/" target="_blank" id="project-2" class="project-item bigger"></a>
-                <h4>Animated countdown</h4>
+                <a href="https://martagrus.github.io/my-games-react/" target="_blank" id="project-2" class="project-item bigger"></a>
+                <h4>Two-Game App</h4>
             </div>
             <div class="project-items">
                 <a href="https://martagrus.github.io/anniversary-project/" target="_blank" id="project-3" class="project-item bigger"></a>
@@ -94,14 +114,20 @@
     </section>
     <section id="contact" class="container">
         <h3>Contact</h3>
-        <div id="icons">
+        <div id="contact-icons">
+            <div id="location">
+                <a href="http://bit.ly/38G7a4e" target="_blank"><i class="fas fa-map-marker-alt bigger"></i>
+                    <span>Warsaw, Poland</span>
+                </a>
+            </div>
+            <a href="skype:m.gruszecka?call"><i class="fab fa-skype bigger"></i></a>
             <a href="mailto:grusmrt@gmail.com?subject=ContactFromWebsite" target="_blank"><i class="fas fa-envelope-square bigger"></i></a>
-            <a href="https://www.linkedin.com/in/martagruszecka/" target="_blank"><i class="fab fa-linkedin bigger"></i></a>
+            <a href="https://www.linkedin.com/in/martagruszecka/detail/contact-info/" target="_blank"><i class="fab fa-linkedin bigger"></i></a>
             <a href="https://github.com/martagrus" target="_blank"><i class="fab fa-github-square bigger"></i></a>
         </div>
     </section>
     <footer>
-        <p>&copy Marta Grus/ 2019</p>
+        <p>&copy Marta Grus/ 2020</p>
     </footer>
 </body>
 </html>

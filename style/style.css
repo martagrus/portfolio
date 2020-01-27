@@ -25,7 +25,7 @@ nav {
 }
 
 nav a {
-    font-size: 2vh;
+    font-size: 1.5vh;
     text-decoration: none;
     color: black;
 }
@@ -47,8 +47,9 @@ nav a {
 }
 
 h1 {
-    font-size: 4vh;
     padding-bottom: 5%;
+    font-size: 4vh;
+    text-align: center;
 }
 
 h2 {
@@ -64,11 +65,34 @@ h4 {
     font-size: 1.7vh;
 }
 
-#text-about {
+#about-container {
+    margin: 3% 10% 3% 10%;
+}
+
+.about-texts {
+    padding-bottom: 4%;
     font-size: 2vh;
-    margin: 5% 15%;
+}
+
+#text-about {
     text-align: justify;
 }
+
+ul li:before {
+    content: "-";
+}
+
+.icons {
+    font-size: 100%;
+}
+
+.icons a {
+    font-size: 150%;
+}
+
+.icons:visited {
+    color: black;
+} 
 
 .list {
     display: grid;
@@ -99,11 +123,11 @@ h4 {
 }
 
 #project-1 {
-    background-image: url("../assets/gry.jpg");
+    background-image: url("../assets/restaurant.jpg");
 }
 
 #project-2 {
-    background-image: url("../assets/my-bday.jpg");
+    background-image: url("../assets/gry.jpg");
 }
 
 #project-3 {
@@ -118,12 +142,28 @@ h4 {
     background-image: url("../assets/gh.jpg");
 }
 
-#icons {
+#contact-icons {
+    text-align: center;
     font-size: 200%;
 }
 
-#icons a {
+#contact-icons a {
     color: black;
+}
+
+#location {
+    font-size: 2.5vh;
+    margin-bottom: 15%;
+}
+
+#location i {
+    font-size: 200%;
+    vertical-align: middle;
+    margin-right: 3%;
+}
+
+#location a {
+    text-decoration: none;
 }
 
 footer {
@@ -153,8 +193,7 @@ footer {
     nav a {
         display: flex;
         flex-direction: column;
-        font-size: 1.7vh;
-        text-decoration: none;
+        font-size: 1.2vh;
         color: black;
     }
 
@@ -177,11 +216,7 @@ footer {
     #projects-btn {
         display: flex;
         align-items: center;
-        justify-content: center;
-        
-    }
-
-    #projects-btn a {
+        justify-content: center;  
         color: black;
         text-decoration: none;
     }
@@ -197,8 +232,7 @@ footer {
           [gap-end]      2px
           [inner-end]    5px
           [mid-end]      5px 
-          [outer-end] 
-        ;
+          [outer-end];
         grid-template-rows: 
           [outer-start]  5px 
           [mid-start]    5px 
@@ -207,8 +241,7 @@ footer {
           [gap-end]      2px
           [inner-end]    5px
           [mid-end]      5px 
-          [outer-end] 
-        ;
+          [outer-end];
         box-shadow: 0 0 10px silver;
     }
       
@@ -285,8 +318,8 @@ footer {
         margin: 5% 15%;
     }
 
-    #text-about {
-        font-size: 3vh;
+    .about-texts {
+        font-size: 2.5vh;
     }
 
     .list {
@@ -302,6 +335,7 @@ footer {
     }
     
     .list-item {
+        height: 6vh;
         font-size: 3vh;
     }
 
@@ -309,8 +343,12 @@ footer {
         height: 20vh;
     }
 
-    #icons {
-        font-size: 400%;
+    #contact-icons {
+        font-size: 300%;
+    }
+
+    #location {
+        font-size: 3vh;
     }
 }
 
@@ -321,7 +359,7 @@ footer {
         line-height: 150%;
     }
 
-    nav a, aside {
+    nav a, a aside {
         font-size: 3vh;
     }
 
@@ -331,6 +369,44 @@ footer {
 
     .square-deco-container .square-deco-content {
         padding: 5px 10px;
+    }
+
+    #about h3 {
+        padding-top: 3%;
+    }
+
+    #about-container {
+        margin: 0% 15% 3% 15%;
+    }
+
+    .about-texts {
+        font-size: 3vh;
+    }
+
+    #course-info {
+        font-size: 2.5vh;
+    }
+
+    #experience-icons {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 3%;
+        font-size: 3vh;
+    }
+
+    .icons i {
+        vertical-align: middle;
+        font-size: 200%;
+    }
+
+    .icons:hover {
+        color: silver;
+    }
+
+    .list-item {
+        height: 4vh;
     }
 
     .project-item{
@@ -346,7 +422,11 @@ footer {
         transition: 0.5s all;
     }
 
-    #icons a:hover {
+    #contact-icons {
+        font-size: 400%;
+    }
+
+    #contact-icons a:hover {
         color: silver;
     }
 }
