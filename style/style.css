@@ -4,6 +4,8 @@ html {
 
 body {
     background-image: url("../assets/background.jpg");
+    background-size: 7%;
+    background-repeat: repeat;
     font-family: 'Poiret One', cursive;
 }
 
@@ -43,7 +45,7 @@ nav a {
     align-items: center;
     justify-content: center;
     background-color: #fdfffc;
-    box-shadow: 0 0 20px silver;
+    box-shadow: 0 0 20px goldenrod;
 }
 
 h1 {
@@ -63,6 +65,16 @@ h3 {
 
 h4 {
     font-size: 1.7vh;
+}
+
+.full-name {
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+#profession {
+    animation: showup 9s infinite;
 }
 
 #about-container {
@@ -124,11 +136,11 @@ ul li:before {
 }
 
 #project-1 {
-    background-image: url("../assets/restaurant.jpg");
+    background-image: url("../assets/gh.jpg");
 }
 
 #project-2 {
-    background-image: url("../assets/gry.jpg");
+    background-image: url("../assets/todo.jpg");
 }
 
 #project-3 {
@@ -136,11 +148,15 @@ ul li:before {
 }
 
 #project-4 {
-    background-image: url("../assets/todo.jpg");
+    background-image: url("../assets/gry.jpg");
 }
 
 #project-5 {
-    background-image: url("../assets/gh.jpg");
+    background-image: url("../assets/restaurant.jpg");
+}
+
+#project-6 {
+    background-image: url("../assets/beauty-shop.jpg");
 }
 
 #contact-icons {
@@ -353,7 +369,7 @@ footer {
     }
 }
 
-@media (min-width: 996px) {
+@media (min-width: 1024px) {
     nav, aside {
         height: 22vh;
         top: 40%;
@@ -366,6 +382,20 @@ footer {
 
     nav a:hover{
         background-color: silver;
+    }
+
+    #name {
+        animation: showup 9s infinite;
+    }
+    
+    #last-name {
+        width:0px;
+        animation: reveal 9s infinite;
+    }
+    
+    #last-name span {
+        margin-left:-355px;
+        animation: slidein 9s infinite;
     }
 
     .square-deco-container .square-deco-content {
@@ -410,9 +440,6 @@ footer {
         height: 4vh;
     }
 
-    .project-item{
-        background-size: contain;
-    }
     .project-item:hover {
         color: transparent;
         filter: unset;
@@ -430,4 +457,26 @@ footer {
     #contact-icons a:hover {
         color: silver;
     }
+}
+
+@keyframes showup {
+    0% {opacity:0}
+    30% {opacity:0.6}
+    70% {opacity:1}
+    100% {opacity:0}
+}
+
+@keyframes slidein {
+    0% {margin-left:-800px}
+    30% {margin-left:-800px}
+    70% {margin-left:0px}
+    100% {margin-left:0px}
+}
+
+@keyframes reveal {
+    0% {opacity:0; width:0px;}
+    25% {opacity:0.6; width:0px;}
+    50% {width:355px;}
+    75% {opacity:1;}
+    100% {opacity:0; width:355px;}
 }
